@@ -43,32 +43,42 @@ body,ul{
     display: block;
 }
 
-.wrapper{
+.wrapper1{
+    height: 1400px;
+    width: 100vw; 
+    display: grid;
+    grid-template-rows: 0px 50% 35% 1fr;
+    grid-template-areas: 
+    'hd'
+    'mn'
+    'sec'
+    'ft'
+}
+
+.wrapper2{
     height: 1000px;
     width: 100vw; 
     display: grid;
-    grid-template-rows: 50px 75% 1fr;
+    grid-template-rows: 0px 70% 1fr;
     grid-template-areas: 
     'hd'
     'mn'
     'ft'
 }
 
-
-
 header{
     grid-area: hd;
     position: fixed;
     width: 100vw;
     height: 60px;
-    background-color: rgb(247, 249, 249);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: rgb(59, 65, 60);
 }
 
@@ -81,13 +91,31 @@ main{
     justify-content: space-between;
 }
 
+.mn_foto{
+    padding-top: 40px;
+}
+
 .welcome{
     background-image: url(../img/portrait.JPG);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: -74px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+section{
+    grid-area: sec;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+p{
+    text-align: center;
 }
 
 h3{
@@ -96,6 +124,9 @@ h3{
 
 footer{
     grid-area: ft;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 img{
