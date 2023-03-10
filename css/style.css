@@ -53,15 +53,15 @@ body,ul{
     'mn'
 }
 
-.wrapper2{
-    height: 2650px;
-    width: 100vw; 
-    display: grid;
-    grid-template-rows: 0px 70% 1fr;
-    grid-template-areas: 
-    'hd'
-    'mn'
-    'ft'
+.welcome{
+    background-image: url(../img/portrait.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -74px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 15px;
 }
 
 header{
@@ -75,8 +75,8 @@ header{
     justify-content: space-between;
 }
 
-h1{
-    font-size: 2rem;
+a{
+    text-decoration: none;
     color: rgb(59, 65, 60);
 }
 
@@ -93,24 +93,49 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
-
-.mn_foto{
     padding-top: 40px;
 }
 
-.welcome{
-    background-image: url(../img/portrait.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: -74px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+.logo{
+    width: 10vw;
+}
+
+.wrapper2{
+    height: 2650px;
+    width: 100vw; 
+    display: grid;
+    grid-template-rows: 0px 70% 1fr;
+    grid-template-areas: 
+    'hd'
+    'mn'
+    'ft'
+}
+
+h1{
+    font-size: 2rem;
+    color: rgb(59, 65, 60);
+    text-transform: capitalize;
+}
+
+h2{
+    color: rgb(59, 65, 60);
+    text-transform: capitalize;
 }
 
 h3{
     font-size: 2rem;
+}
+
+.hiprub{
+    color: rgb(65, 157, 120);
+}
+
+.ringrub{
+    color: rgb(152, 143, 42);
+}
+
+.bwrub{
+    color: rgb(59, 65, 60);
 }
 
 footer{
@@ -118,6 +143,7 @@ footer{
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
+    padding-bottom: 15px;
 }
 
 img{
