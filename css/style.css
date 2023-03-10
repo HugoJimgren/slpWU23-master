@@ -44,19 +44,17 @@ body,ul{
 }
 
 .wrapper1{
-    height: 1400px;
+    height: 93.2vh;
     width: 100vw; 
     display: grid;
-    grid-template-rows: 0px 50% 35% 1fr;
+    grid-template-rows: 0px 1fr;
     grid-template-areas: 
     'hd'
     'mn'
-    'sec'
-    'ft'
 }
 
 .wrapper2{
-    height: 1000px;
+    height: 2650px;
     width: 100vw; 
     display: grid;
     grid-template-rows: 0px 70% 1fr;
@@ -86,9 +84,15 @@ main{
     grid-area: mn;
     background-color: rgb(247, 249, 249);
     display: flex;
+}
+
+.mn_foto{
+    grid-area: mn;
+    display: flex;
+    background-color: rgb(247, 249, 249);
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .mn_foto{
@@ -101,21 +105,8 @@ main{
     background-size: cover;
     background-position-x: -74px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section{
-    grid-area: sec;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-}
-
-p{
-    text-align: center;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 h3{
@@ -125,7 +116,7 @@ h3{
 footer{
     grid-area: ft;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
 }
 
@@ -133,3 +124,13 @@ img{
     width: 80vw;
 }
 
+.wrapper3{
+    height: 100vh;
+    width: 100vw; 
+    display: grid;
+    grid-template-rows: 0px 70% 1fr;
+    grid-template-areas: 
+    'hd'
+    'mn'
+    'ft'
+}
