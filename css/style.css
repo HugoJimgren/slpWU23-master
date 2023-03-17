@@ -54,21 +54,21 @@ body,ul{
 }
 
 .welcome{
-    background-image: url(../img/portrait.JPG);
+    background-image: url(../img/R1-05391-0029.JPG);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: -74px;
+    background-position-x: 50%;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    padding-bottom: 15px;
+    padding-bottom: 8%;
 }
 
 header{
     grid-area: hd;
     position: fixed;
     width: 100vw;
-    height: 60px;
+    height: 7vh;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -92,8 +92,8 @@ main{
     background-color: rgb(247, 249, 249);
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding-top: 40px;
+    gap: 1vh;
+    padding-top: 5vh;
 }
 
 .logo{
@@ -101,7 +101,7 @@ main{
 }
 
 .wrapper2{
-    height: 2650px;
+    height: 320vh;
     width: 100vw; 
     display: grid;
     grid-template-rows: 0px 70% 1fr;
@@ -143,7 +143,7 @@ footer{
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
-    padding-bottom: 15px;
+    padding-bottom: 8%;
 }
 
 img{
@@ -154,9 +154,21 @@ img{
     height: 100vh;
     width: 100vw; 
     display: grid;
-    grid-template-rows: 0px 70% 1fr;
+    grid-template-rows: 0px 100%;
+    grid-template-columns: 100vw;
     grid-template-areas: 
     'hd'
     'mn'
-    'ft'
+}
+
+.mn.gear{
+    grid-area: mn;
+    display: flex;
+}
+
+.gear_box{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    margin: auto;
 }
