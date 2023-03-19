@@ -1,17 +1,21 @@
 body,ul{
     margin: 0;
+    background-color: rgb(247, 249, 249);
 }
 
 .menu{
-    height: 100vh;
-    width: 80vw;
+    padding-top: 17%;
+    height: 34vh;
+    width: 100vw;
     position: fixed;
-    top: 0;
-    left: -90vw;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    top: -45vh;
+    transition: top 0.3s;
+    box-shadow: 0px 10px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(247, 249, 249);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-button{
@@ -25,7 +29,7 @@ body,ul{
 }
 
 .show{
-    left: 0;
+    top: 0;
 }
 
 .fade-layer{
@@ -73,6 +77,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 11;
+    background-color: rgba(247, 249, 249, 0.626);
+}
+
+.header_index{
+    background-color: transparent;
 }
 
 a{
@@ -82,14 +92,12 @@ a{
 
 main{
     grid-area: mn;
-    background-color: rgb(247, 249, 249);
     display: flex;
 }
 
 .mn_foto{
     grid-area: mn;
     display: flex;
-    background-color: rgb(247, 249, 249);
     flex-direction: column;
     align-items: center;
     gap: 1vh;
@@ -150,25 +158,30 @@ img{
     width: 80vw;
 }
 
-.wrapper3{
-    height: 100vh;
+.wrapper_gear{
+    height: 93.2vh;
     width: 100vw; 
     display: grid;
-    grid-template-rows: 0px 100%;
+    grid-template-rows: 0px 90% 1fr;
     grid-template-columns: 100vw;
     grid-template-areas: 
     'hd'
     'mn'
+    'ft'
 }
 
 .mn.gear{
     grid-area: mn;
     display: flex;
+    flex-direction: column;
 }
 
 .gear_box{
     background-color: aqua;
-    width: 100px;
-    height: 100px;
-    margin: auto;
+    width: 80vw;
+    height: 35vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
