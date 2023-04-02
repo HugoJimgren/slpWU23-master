@@ -3,16 +3,27 @@ body,ul{
     background-color: rgb(247, 249, 249);
 }
 
+@font-face {
+    font-family: customFonts;
+    src: url(/misc/PoiretOne-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wrapper2_desktop{
+    display: none;
+}
+
 .menu{
     padding-top: 17%;
-    height: 34vh;
+    height: 25vh;
     width: 100vw;
     position: fixed;
     top: -45vh;
     transition: top 0.3s;
     box-shadow: 0px 10px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
-    background-color: rgb(247, 249, 249);
+    background-color: rgba(247, 249, 249);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,8 +58,12 @@ body,ul{
     display: block;
 }
 
-.wrapper1{
-    height: 93.2vh;
+.wrapper1_desktop{
+    display: none;
+}
+
+.wrapper1_mobile{
+    height: 100vh;
     width: 100vw; 
     display: grid;
     grid-template-rows: 0px 1fr;
@@ -76,8 +91,9 @@ header{
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 11;
+    justify-content: space-around;
+    z-index: 10;
+    gap: 30%;
     background-color: rgba(247, 249, 249, 0.626);
 }
 
@@ -88,6 +104,7 @@ header{
 a{
     text-decoration: none;
     color: rgb(59, 65, 60);
+    font-family: customFonts;
 }
 
 main{
@@ -108,7 +125,7 @@ main{
     width: 10vw;
 }
 
-.wrapper2{
+.wrapper2_mobile{
     height: 320vh;
     width: 100vw; 
     display: grid;
@@ -119,19 +136,32 @@ main{
     'ft'
 }
 
+.foto{
+    width: 80vw;
+}
+
 h1{
     font-size: 2rem;
     color: rgb(59, 65, 60);
     text-transform: capitalize;
+    font-family: customFonts;
 }
 
 h2{
     color: rgb(59, 65, 60);
     text-transform: capitalize;
+    font-family: customFonts;
 }
 
 h3{
     font-size: 2rem;
+    font-family: customFonts;
+}
+
+p{
+    font-family: customFonts;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .hiprub{
@@ -154,34 +184,418 @@ footer{
     padding-bottom: 8%;
 }
 
-img{
-    width: 80vw;
-}
-
 .wrapper_gear{
-    height: 93.2vh;
+    height: 100vh;
     width: 100vw; 
     display: grid;
-    grid-template-rows: 0px 90% 1fr;
+    grid-template-rows: 0px 30% 60% 1fr;
     grid-template-columns: 100vw;
     grid-template-areas: 
     'hd'
-    'mn'
+    'sec1'
+    'sec2'
     'ft'
 }
 
-.mn.gear{
-    grid-area: mn;
+.sec1{
+    grid-area: sec1;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10%;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 4vh;
+    outline: 1.5px solid rgb(59, 65, 60);
+}
+
+.cam_button{
+    cursor: pointer;
+    display: inline;
+}
+
+.film_button{
+    cursor: pointer;
+    display: inline;
+}
+
+.lens_button{
+    cursor: pointer;
+    display: inline;
+}
+
+.sec2{
+    grid-area: sec2;
+    display: flex;
+    justify-content: center;
 }
 
 .gear_box{
-    background-color: aqua;
     width: 80vw;
     height: 35vh;
     overflow: hidden;
     display: flex;
-    flex-direction: row;
-    align-self: center;
+    justify-content: center;
+}
+
+.gear_img1{
+    position: absolute;
+    height: 35vh;
+}
+
+.gear_img2{
+    position: absolute;
+    height: 35vh;
+}
+
+.gear_img3{
+    position: absolute;
+    height: 35vh;
+}
+
+.gear_img_default{
+    position: absolute;
+    height: 35vh;
+}
+
+.img_show{
+    z-index: 100;
+}
+
+@media (min-width: 600px){
+    body,ul{
+        margin: 0;
+        background-color: rgb(247, 249, 249);
+    }
+
+    .wrapper2_mobile{
+        display: none;
+    }
+    
+    .menu{
+        padding-top: 7%;
+        height: 10vh;
+        width: 100vw;
+        position: fixed;
+        top: -80vh;
+        transition: top 0.3s;
+        box-shadow: 0px 10px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        background-color: rgb(247, 249, 249);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .menu-button2{
+        cursor: pointer;
+        display: inline;
+    }
+
+    .menu-button2 i.material-icons{
+        font-size: 2.5rem;
+        color: rgb(59, 65, 60);
+    }
+    
+    .show{
+        top: 0;
+    }
+    
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    
+    .fade-layer.visible{
+        display: block;
+    }
+
+    .wrapper1_mobile{
+        display: none;
+    }
+    
+    .wrapper1_desktop{
+        height: 100vh;
+        width: 100vw; 
+        display: grid;
+        grid-template-rows: 0px 1fr;
+        grid-template-areas: 
+        'hd'
+        'mn'
+    }
+    
+    .welcome{
+        background-image: url(../img/R1-09094-0004.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 50%;
+        background-position-y: -240px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding-bottom: 2%;
+        gap: 25%;
+    }
+    
+    header{
+        grid-area: hd;
+        position: fixed;
+        width: 100vw;
+        height: 9vh;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 10;
+        gap: 75%;
+    }
+
+    .header_color{
+        background-color: transparent;
+    }
+    
+    a{
+        text-decoration: none;
+        color: rgb(59, 65, 60);
+        font-weight: 500;
+    }
+    
+    .isec1{
+        grid-area: isec1;
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15vw;
+        padding-right: 26vw;
+        
+    }
+
+    .isec2{
+        grid-area: isec2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25vw;
+        padding-right: 15vw;
+        
+    }
+
+    .isec3{
+        grid-area: isec3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15vw;
+        padding-right: 25vw;
+        
+    }
+
+    .isec4{
+        grid-area: isec4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25vw;
+        padding-right: 15vw;
+        
+    }
+
+    .isec5{
+        grid-area: isec5;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15vw;
+        padding-right: 25vw;
+        
+    }
+
+    .isec6{
+        grid-area: isec6;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 23vw;
+        padding-right: 15vw;
+        
+    }
+
+    .hd2{
+        grid-area: hd2;
+        display: flex;
+    }
+    
+    .logo{
+        width: 3vw;
+    }
+    
+    .wrapper2_desktop{
+        height: 520vh;
+        width: 98vw; 
+        display: grid;
+        grid-template-rows: 0px 30vh 50vh 50vh 100vh 100vh 50vh 100vh 1fr;
+        grid-template-areas: 
+        'hd'
+        'hd2'
+        'isec1'
+        'isec2'
+        'isec3'
+        'isec4'
+        'isec5'
+        'isec6'
+        'ft'
+    }
+    
+    .foto{
+        width: 30vw;
+        transition: 0.5s;
+    }
+
+    .foto:hover{
+        transition: 0.3s;
+        width: 32.5vw;
+    }
+    
+    h1{
+        font-size: 2rem;
+        color: rgb(59, 65, 60);
+        text-transform: capitalize;
+        font-family: customFonts;
+    }
+    
+    h2{
+        color: rgb(59, 65, 60);
+        text-transform: capitalize;
+    }
+    
+    h3{
+        font-size: 2rem;
+    }
+    
+    .hiprub{
+        color: rgb(65, 157, 120);
+        margin: auto;
+    }
+    
+    .ringrub{
+        color: rgb(152, 143, 42);
+        margin: auto;
+    }
+    
+    .bwrub{
+        color: rgb(59, 65, 60);
+        margin: auto;
+    }
+    
+    footer{
+        grid-area: ft;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+    
+    .wrapper_gear{
+        height: 100vh;
+        width: 100vw; 
+        display: grid;
+        grid-template-rows: 0px 30% 50% 5%;
+        grid-template-areas: 
+        'hd'
+        'sec1'
+        'sec2'
+        'ft'
+    }
+    
+    .sec1{
+        grid-area: sec1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    #button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8vw;
+        height: 4vh;
+        outline: 1.5px solid rgb(59, 65, 60);
+    }
+    
+    .cam_button{
+        cursor: pointer;
+        display: inline;
+    }
+    
+    .film_button{
+        cursor: pointer;
+        display: inline;
+    }
+    
+    .lens_button{
+        cursor: pointer;
+        display: inline;
+    }
+    
+    .sec2{
+        grid-area: sec2;
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+    }
+    
+    .gear_box{
+        width: 70vw;
+        height: 35vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .gear_img1{
+        position: absolute;
+        height: 45vh;
+        top: 25vh;
+        opacity: 0%;
+    }
+    
+    .gear_img2{
+        position: absolute;
+        height: 50vh;
+        top: 25vh;
+        opacity: 0%;
+    }
+    
+    .gear_img3{
+        position: absolute;
+        height: 45vh;
+        top: 30vh;
+        opacity: 0%;
+    }
+    
+    .gear_img_default{
+        position: absolute;
+        height: 35vh;
+    }
+    
+    .img_show{
+        opacity: 100%;
+    }
 }
