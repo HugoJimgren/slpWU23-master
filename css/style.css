@@ -73,6 +73,7 @@ body,ul{
 }
 
 .welcome{
+    grid-area: mn;
     background-image: url(../img/R1-09094-0000.JPG);
     background-repeat: no-repeat;
     background-size: cover;
