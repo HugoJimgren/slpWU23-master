@@ -246,21 +246,21 @@ footer{
 
 .gear_img1{
     position: absolute;
-    height: 40vh;
+    width: 100vw;
     top: 25vh;
     opacity: 0%;
 }
 
 .gear_img2{
     position: absolute;
-    height: 50vh;
+    width: 100vw;
     top: 25vh;
     opacity: 0%;
 }
 
 .gear_img3{
     position: absolute;
-    height: 45vh;
+    width: 100vw;
     top: 30vh;
     opacity: 0%;
 }
