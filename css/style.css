@@ -346,6 +346,7 @@ footer{
     }
     
     .welcome{
+        grid-area: mn;
         background-image: url(../img/R1-09094-0004.JPG);
         background-repeat: no-repeat;
         background-size: cover;
