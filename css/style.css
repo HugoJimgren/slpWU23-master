@@ -247,6 +247,7 @@ footer{
 .gear_img1{
     position: absolute;
     width: 100vw;
+    height: auto;
     top: 25vh;
     opacity: 0%;
 }
@@ -254,6 +255,7 @@ footer{
 .gear_img2{
     position: absolute;
     width: 100vw;
+    height: auto;
     top: 25vh;
     opacity: 0%;
 }
@@ -261,6 +263,7 @@ footer{
 .gear_img3{
     position: absolute;
     width: 100vw;
+    height: auto;
     top: 30vh;
     opacity: 0%;
 }
@@ -579,6 +582,7 @@ footer{
     .gear_img1{
         position: absolute;
         height: 45vh;
+        width: auto;
         top: 25vh;
         opacity: 0%;
     }
@@ -586,6 +590,7 @@ footer{
     .gear_img2{
         position: absolute;
         height: 50vh;
+        width: auto;
         top: 25vh;
         opacity: 0%;
     }
@@ -593,6 +598,7 @@ footer{
     .gear_img3{
         position: absolute;
         height: 45vh;
+        width: auto;
         top: 30vh;
         opacity: 0%;
     }
