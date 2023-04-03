@@ -233,10 +233,11 @@ footer{
     grid-area: sec2;
     display: flex;
     justify-content: center;
+    padding-top: 2%;
 }
 
 .gear_box{
-    width: 80vw;
+    width: 70vw;
     height: 35vh;
     overflow: hidden;
     display: flex;
@@ -245,17 +246,23 @@ footer{
 
 .gear_img1{
     position: absolute;
-    height: 35vh;
+    height: 40vh;
+    top: 25vh;
+    opacity: 0%;
 }
 
 .gear_img2{
     position: absolute;
-    height: 35vh;
+    height: 50vh;
+    top: 25vh;
+    opacity: 0%;
 }
 
 .gear_img3{
     position: absolute;
-    height: 35vh;
+    height: 45vh;
+    top: 30vh;
+    opacity: 0%;
 }
 
 .gear_img_default{
@@ -264,7 +271,7 @@ footer{
 }
 
 .img_show{
-    z-index: 100;
+    opacity: 100%;
 }
 
 @media (min-width: 600px){
