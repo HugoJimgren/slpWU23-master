@@ -24,20 +24,6 @@ function showMenu(){
 
 }
 
-/* FOTO */
-
-let imgButton = document.querySelector("#foto1")
-if (imgButton){
-    imgButton.addEventListener("click",enlarge)
-}
-
-function enlarge(){
-    let enlarged = document.querySelector(".foto1_enlarged")
-    enlarged.classList.toggle(".foto_enlarged")
-    console.log('a')
-}
-
-
 /* UTRUSTNING */
 
 let camButton = document.querySelector(".cam_button");
